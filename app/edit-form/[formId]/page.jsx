@@ -12,7 +12,7 @@ import { toast } from "sonner";
 import Controller from "../_components/Controller";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { RWebShare } from "react-web-share";
+
 
 function EditForm() {
   const params = useParams();
@@ -126,6 +126,20 @@ function EditForm() {
   };
 
   if (!record) return <p className="text-center">Loading...</p>;
+  const shareForm = () => {
+    if (navigator.share) {
+        navigator.share({
+            title: jsonForm?.formTitle,
+            text: jsonForm?.formHeading + " - Build your form in seconds with AI Form Builder",
+            url: formLink,
+        })
+        .then(() => console.log("Shared successfully!"))
+        .catch((error) => console.error("Error sharing:", error));
+    } else {
+        toast("Sharing not supported on this device.");
+    }
+};
+
 
   return (
     <div className="p-10">
@@ -143,18 +157,10 @@ function EditForm() {
               <SquareArrowOutUpRight className="h-5 w-5" /> Live Preview
             </Button>
           </Link>
-          <RWebShare
-            data={{
-              text: `${jsonForm?.formHeading}, Build your form in seconds with AI Form Builder!`,
-              url: `${process.env.NEXT_PUBLIC_BASE_URL}/aiform/${record.id}`,
-              title: jsonForm?.formTitle,
-            }}
-            onClick={() => console.log("Shared successfully!")}
-          >
-            <Button className="flex gap-2 bg-green-600 hover:bg-green-700">
-              <Share2 /> Share
-            </Button>
-          </RWebShare>
+          <Button variant="outline" size="sm" className="flex gap-2" onClick={shareForm}>
+    <Share2 className='h-5 w-5' /> Share
+</Button>
+
         </div>
       </div>
 
