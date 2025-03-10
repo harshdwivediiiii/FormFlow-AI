@@ -1,5 +1,5 @@
 "use client"
-import PricingPlan from '../../../data/PricingPlan';
+import PricingPlan from '@/app/_data/PricingPlan'
 import { useUser } from '@clerk/nextjs'
 import React from 'react'
 
