@@ -6,6 +6,15 @@
 </p>
 
 <hr />
+## 🎥 Live Demo
+
+### 📺 Video Demo
+[![Watch the demo](demo.png)]
+> Click the image above to watch the demo.
+
+### 🖼️ Screenshot
+![FormFlow AI Screenshot](public/demo.png)
+
 
 <h2>🚀 Getting Started</h2>
 
