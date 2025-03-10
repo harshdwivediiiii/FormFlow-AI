@@ -8,8 +8,13 @@
 <hr />
 ## 🎥 Live Demo
 
+https://github.com/user-attachments/assets/e5247a95-ac94-4e95-807c-d8d87136fb62
+
+
+
 ### 📺 Video Demo
-[![Watch the demo](Demo.mp4)]
+
+
 > Click the image above to watch the demo.
 
 ### 🖼️ Screenshot
