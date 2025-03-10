@@ -35,7 +35,7 @@ const Navbar = () => {
       { name: 'Home', href: '/', icon: Home },
       { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
       { name: 'My Account', href: '/my-account', icon: User },
-      { name: 'Your History', href: '/history', icon: History },
+      { name: 'Your History', href: '/dashboard/responses', icon: History },
     ];
 
     if (searchLower === '') {
