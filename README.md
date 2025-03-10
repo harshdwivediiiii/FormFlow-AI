@@ -9,7 +9,7 @@
 ## 🎥 Live Demo
 
 ### 📺 Video Demo
-[![Watch the demo](demo.png)]
+[![Watch the demo](Demo.mp4)]
 > Click the image above to watch the demo.
 
 ### 🖼️ Screenshot
